@@ -1,25 +1,25 @@
 pipeline {
     agent any
     stages {
-        stage ('Build') {
+        stage('Build') {
             steps {
                 sh '''
                 #!/bin/bash
                 pwd
                 ls
-                echo "This is my first build job using pipeline
+                echo "This is my first build job using pipeline"
 
                 '''
             }
         }
 
-        stage ('deploy') {
+        stage('deploy') {
             steps {
                 echo "This is my first deploy job"
             }
         }
 
-        stage ('Test1') {
+        stage('Test1') {
             steps {
                 sh '''
                    #!/bin/bash
@@ -30,7 +30,7 @@ pipeline {
             }
         }
 
-        stage ('Test2') {
+        stage('Test2') {
             steps {
             echo "my next level test here"
         }
