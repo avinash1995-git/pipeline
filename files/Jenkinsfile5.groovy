@@ -5,6 +5,10 @@ pipeline {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '', numToKeepStr: '3')
 }
 
+ parameters {
+  string defaultValue: 'My string', description: 'Please enter your string here', name: 'value'
+}
+
 
     stages {
         stage ('Workflow') {
@@ -14,6 +18,7 @@ pipeline {
             agent { label 'build' }
 
             steps {
+             echo "the string entered is $value"
              echo 'This is my Build stage'
             }
             }
