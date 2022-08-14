@@ -2,6 +2,8 @@ pipeline {
     agent none 
 
     stages {
+
+        parallel {
         stage ('Build') {
 
             agent { label 'build' }
@@ -29,6 +31,7 @@ pipeline {
                 echo 'This is my Test stage'
                 
             }
+        }
         }
     }
 }
