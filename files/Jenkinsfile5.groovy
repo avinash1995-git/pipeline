@@ -16,7 +16,7 @@ pipeline {
             agent { label 'build' }
 
             steps {
-             echo "the string entered is $value"
+            
              echo 'This is my Build stage'
             }
             }
