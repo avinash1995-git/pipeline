@@ -5,9 +5,7 @@ pipeline {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '', numToKeepStr: '3')
 }
 
- parameters {
-  string defaultValue: 'My string', description: 'Please enter your string here', name: 'value'
-}
+ 
 
 
     stages {
