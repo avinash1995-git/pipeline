@@ -3,9 +3,9 @@ pipeline {
 
     stages {
 
-        parallel {
+        
         stage ('Build') {
-
+            parallel {
             agent { label 'build' }
 
             steps {
