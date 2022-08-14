@@ -1,17 +1,23 @@
 pipeline {
     agent none 
 
-    stages {
+    options {
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '', numToKeepStr: '3')
+}
 
-        
-        stage ('Build') {
+
+    stages {
+        stage ('Workflow') {
             parallel {
+
+            stage('Build') { 
             agent { label 'build' }
 
             steps {
              echo 'This is my Build stage'
             }
-        }
+            }
+        
 
         stage ('Deploy') {
 
@@ -34,4 +40,5 @@ pipeline {
         }
         }
     }
+}
 }
