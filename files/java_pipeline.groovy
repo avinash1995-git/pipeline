@@ -21,6 +21,8 @@ pipeline {
 
         stage('Deploy') {
 
+            agent{label 'tomcat'}
+
             steps {
 
                 sh '''
