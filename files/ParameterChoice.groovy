@@ -44,7 +44,7 @@ build , deploy, test''', name: 'choice'
 
         stage('Test') {
 
-            agent tomcat
+            agent {label 'tomcat'}
 
             steps {
 
