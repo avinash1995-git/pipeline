@@ -21,7 +21,7 @@ pipeline {
 
         stage('Deploy') {
 
-            agent{label 'tomcat'}
+            agent{label 'build'}
 
             steps {
 
