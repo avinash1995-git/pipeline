@@ -17,15 +17,18 @@ build , deploy, test''', name: 'choice'
 
                 script {
 
-                    if (param.choice == 'build') {}
+                    if (param.choice == 'build') {
 
                 echo "execute build stage"
                 }
+
                 else {
                     echo " skip build stage"
                 }
+                }
             }
         }
+        
         
 
         stage('deploy') {
