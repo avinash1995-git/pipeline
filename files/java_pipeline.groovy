@@ -33,5 +33,39 @@ pipeline {
                 '''
             }
         }
+
+        stage('Central Test') {
+
+            parallel {
+
+                stage('Unit Test'){
+
+                    agent {label 'tomcat'}
+                  steps {
+                    sh '''
+                    cd /home/ec2-user/apache-tomcat-9.0.65/webapps
+                    ./test.sh
+
+                    '''
+                }
+                }
+
+                stage('Final Test'){
+
+                    agent {label 'tomcat'}
+                   steps {
+                    sh '''
+                    cd /home/ec2-user/apache-tomcat-9.0.65/webapps
+                    ./finaltest.sh
+
+                    '''
+                }
+                }
+
+                
+            }
+        }
+        
+        
     }
 }
