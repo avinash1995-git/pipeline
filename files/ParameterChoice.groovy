@@ -38,7 +38,7 @@ build , deploy, test''', name: 'choice'
 
             steps {
 
-                echo "this is my build"
+                echo "this is my deploy"
             }
         }
 
@@ -48,7 +48,7 @@ build , deploy, test''', name: 'choice'
 
             steps {
 
-                echo "this is my build"
+                echo "this is my test"
             }
         }
     }
