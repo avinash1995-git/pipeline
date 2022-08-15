@@ -28,7 +28,7 @@ pipeline {
                 sh '''
 
                 cd /home/ec2-user/workspace/java_pipeline_new/target
-                scp *.war ec2-user@184.72.5.85:/home/ec2-user/apache-tomcat-9.0.65/webapps
+                scp *.war ec2-user@172.31.12.54:/home/ec2-user/apache-tomcat-9.0.65/webapps
 
                 '''
             }
