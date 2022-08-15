@@ -20,7 +20,7 @@ pipeline {
             steps {
                 
                 echo "this is my $value stage"
-                git branch: 'main', url: $github_var
+                git branch: 'main', url: params.github_var
                 sh 'mvn clean package'
 
             }
