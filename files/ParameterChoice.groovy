@@ -17,7 +17,7 @@ build , deploy, test''', name: 'choice'
 
                 script {
 
-                    if (param.choice == 'build') {
+                    if (params.choice == 'build') {
 
                 echo "execute build stage"
                 }
