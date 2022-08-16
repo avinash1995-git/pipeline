@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
 
             when {
-                expression { choice == 'Build'}
+                expression { params.option == 'Build'}
             }
 
             steps {
@@ -24,7 +24,7 @@ pipeline {
          stage('Deploy') {
 
             when {
-                expression { choice == 'Deploy'}
+                expression { params.option == 'Deploy'}
             }
 
             steps {
@@ -36,7 +36,7 @@ pipeline {
          stage('Test') {
 
             when {
-                expression { choice == 'Test'}
+                expression { params.option == 'Test'}
             }
 
             steps {
